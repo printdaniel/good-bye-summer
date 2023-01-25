@@ -40,8 +40,3 @@ class DataEntry:
             string = "|{:<2}|{:<12}|{:<8}|{:<3}".format(row[0],row[1],row[2],row[3])
             print(string)
             print('-'*31)
-
-
-if __name__ == '__main__':
-    data = DataEntry()
-    data.variables()

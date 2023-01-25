@@ -26,7 +26,6 @@ def create_base():
             print("SQLite connection is closed")
 
 
-
 def run_query(query, parameters=(), db_file = None):
     try:
         with sqlite3.connect(db_file) as conn:
@@ -36,4 +35,3 @@ def run_query(query, parameters=(), db_file = None):
             print("Query executed successfully")
     except sqlite3.Error as error:
         print("Error while executing query: ", error)
-

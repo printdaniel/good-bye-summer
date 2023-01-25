@@ -19,7 +19,6 @@ print(good_bye)
 print(menu)
 data = DataEntry()
 
-
 if __name__ == '__main__':
     opciones = {1: data.variables, 2: data.mostrar_todos, 3: data.entrada_datos, 4: 'finalizado'}
     opcion = int(input("Eliga una opción: "))
