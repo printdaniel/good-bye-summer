@@ -1,6 +1,7 @@
 import sqlite3
-from scrap import AccuWeather
 from base import run_query
+from scrap import AccuWeather
+
 
 class DataEntry:
 
@@ -30,17 +31,17 @@ class DataEntry:
             result = cursor.execute(show_query)
             conn.commit()
 
-        print("+-------------------------------+")
+        print("+---------------------------------+")
         print("ID TEMPERATURA  AMANECER  ATARDECER")
-        print("+-------------------------------+")
+        print("+---------------------------------+")
 
 
         for row in result:
             string = "|{:<2}|{:<12}|{:<8}|{:<3}".format(row[0],row[1],row[2],row[3])
             print(string)
-            print('-'*30)
+            print('-'*31)
 
 
 if __name__ == '__main__':
     data = DataEntry()
-    data.mostrar_todos()
+    data.variables()
